@@ -51,6 +51,6 @@ jobs:
           #  This is the private key used to connect to the server(key.pem in ec2)
           ssh -o StrictHostKeyChecking=no ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }} '
             cd /home/${{ secrets.EC2_USER }}/my-app-2
-            pm2 start dist/main.js --name test_app
+            pm2 start dist/main.js --name test_app_2
             pm2 save
           '
