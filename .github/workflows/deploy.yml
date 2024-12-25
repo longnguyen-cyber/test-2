@@ -53,7 +53,10 @@ jobs:
             # Build the application
             npm run build
 
+            ls -la
+
             # Run database migrations
+            sudo chmod +x rundb.sh
             ./rundb.sh
 
             # Start or restart the application with PM2
