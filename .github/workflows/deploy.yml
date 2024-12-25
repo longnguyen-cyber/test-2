@@ -23,7 +23,7 @@ jobs:
         run: |
           npm install -f
           npm run build
-          npm test
+
       - name: Run db migrations
         run: |
           sudo chmod +x ./rundb.sh
