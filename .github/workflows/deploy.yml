@@ -29,17 +29,18 @@ jobs:
       - name: Build App
         run: npm run build
 
-      - name: Deploy with rsync
-        uses: burnett01/rsync-deployments@5.1
-        with:
-          switches: -avzr --delete
-          path: ./dist/*
-          remote_path: /home/${{ secrets.EC2_USER }}/my-app/
-          remote_host: ${{ secrets.EC2_HOST }}
-          remote_user: ${{ secrets.EC2_USER }}
-          remote_key: '${{ secrets.SSH_PRIVATE_KEY }}' # This is the private key used to connect to the server(key.pem in ec2)
+      # - name: Deploy with rsync
+      #   uses: burnett01/rsync-deployments@5.1
+      #   with:
+      #     switches: -avzr --delete
+      #     path: ./dist/*
+      #     remote_path: /home/${{ secrets.EC2_USER }}/my-app/
+      #     remote_host: ${{ secrets.EC2_HOST }}
+      #     remote_user: ${{ secrets.EC2_USER }}
+      #     remote_key: '${{ secrets.SSH_PRIVATE_KEY }}'
       - name: Start Server
         run: |
+          #  This is the private key used to connect to the server(key.pem in ec2)
           ssh -o StrictHostKeyChecking=no ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }} '
             cd /home/${{ secrets.EC2_USER }}/my-app
             npm install
