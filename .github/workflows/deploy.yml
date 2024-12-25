@@ -19,15 +19,15 @@ jobs:
       - name: run docker
         run: docker compose up -d
 
-      - name: Run db migrations
-        run: |
-          sudo chmod +x ./rundb.sh
-          ./rundb.sh
       - name: Build and test
         run: |
           npm install
           npm run build
           npm test
+      - name: Run db migrations
+        run: |
+          sudo chmod +x ./rundb.sh
+          ./rundb.sh
 
       - name: Install dependencies
         run: npm ci
