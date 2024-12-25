@@ -40,11 +40,24 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: 22
           script: |
-            cd ~/home/${{ secrets.USER }}/app
+            # correct the directory path
+            cd ~/app
+
+            # Ensure the code is present (it's assumed it's a git repository
             git pull origin master
             git status
-            npm install -f --only=prod
+
+            # Install only production dependencies
+            npm install -f --omit=dev
+
+            # Build the application
             npm run build
+
+            # Run database migrations
             ./rundb.sh
-            pm2 start dist/main.js --name test_app_2
+
+            # Start or restart the application with PM2
+            pm2 startOrRestart dist/main.js --name test_app_2
+
+            # Save the PM2 process list
             pm2 save
