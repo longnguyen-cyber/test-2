@@ -9,6 +9,7 @@
   },
   "scripts": {
     "start": "node index.js",
-    "dev": "nodemon index.js"
+    "dev": "nodemon index.js",
+    "build": "mkdir -p dist && find . -maxdepth 1 ! -name 'dist' ! -path './dist' -exec cp -r {} dist \\; && rm -rf dist/node_modules"
   }
 }
