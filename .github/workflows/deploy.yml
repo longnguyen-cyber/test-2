@@ -16,20 +16,11 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Install dependencies
-        run: npm install -f
-
       - name: run docker
         run: docker compose up -d
 
-      - name: Build and test
-        run: |
-          npm run build
-
       - name: Run db migrations
-        run: |
-          sudo chmod +x ./rundb.sh
-          ./rundb.sh
+        run: sudo chmod +x ./rundb.sh
 
       - name: Deploy with rsync
         uses: burnett01/rsync-deployments@5.1
@@ -54,6 +45,8 @@ jobs:
           ssh -o StrictHostKeyChecking=no ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }} '
             cd /home/${{ secrets.EC2_USER }}/my-app-2
             npm install -f
+            npm run build
+            ./rundb.sh
             pm2 start dist/main.js --name test_app_2
             pm2 save
           '
