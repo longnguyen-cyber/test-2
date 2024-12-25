@@ -24,7 +24,7 @@ jobs:
           mkdir -p ~/.ssh
           echo "${{ secrets.SSH_PRIVATE_KEY }}" | tr -d '\r' > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
-          ssh -o StrictHostKeyChecking=no long@82.197.68.51 'echo "SSH connection successful"'
+          ssh -o StrictHostKeyChecking=no ${{ secrets.USER }}@${{ secrets.HOST }} 'echo "SSH connection successful"'
 
       - name: run docker
         run: docker compose up -d
@@ -35,17 +35,10 @@ jobs:
       - name: Deploy using ssh
         uses: appleboy/ssh-action@master
         with:
-          host: 82.197.68.51
-          username: long
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: 22
-
-      - name: Test SSH Connection
-        run: |
-          mkdir -p ~/.ssh
-          echo "${{ secrets.SSH_PRIVATE_KEY }}" | tr -d '\r' > ~/.ssh/id_rsa
-          chmod 600 ~/.ssh/id_rsa
-          ssh -o StrictHostKeyChecking=no ${{ secrets.USER }}@${{ secrets.HOST }} 'echo "SSH connection successful"'
 
       - name: Start Server
         run: |
