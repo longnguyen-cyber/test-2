@@ -19,8 +19,8 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: run app
-        run: npm run start
+      - name: Build App
+        run: npm run build
 
       - name: Deploy with rsync
         uses: burnett01/rsync-deployments@5.1
