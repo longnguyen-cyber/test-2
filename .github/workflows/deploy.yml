@@ -21,7 +21,7 @@ jobs:
 
       - name: Build and test
         run: |
-          npm install
+          npm install -f
           npm run build
           npm test
       - name: Run db migrations
