@@ -26,23 +26,19 @@ jobs:
         with:
           switches: -avzr --delete
           path: ./* ./package.json .env
-          remote_path: /home/${{ secrets.EC2_USER }}/my-app-2/
-          remote_host: ${{ secrets.EC2_HOST }}
-          remote_user: ${{ secrets.EC2_USER }}
-          remote_key: '${{ secrets.SSH_PRIVATE_KEY }}'
+          remote_path: /home/${{ secrets.VPS_USER }}/my-app-2/
+          remote_host: ${{ secrets.VPS_HOST }}
+          remote_user: ${{ secrets.VPS_USER }}
+          remote_password: ${{ secrets.VPS_PASSWORD }}
 
       - name: Test SSH Connection
         run: |
-          mkdir -p ~/.ssh
-          echo "${{ secrets.SSH_PRIVATE_KEY }}" | tr -d '\r' > ~/.ssh/id_rsa
-          chmod 600 ~/.ssh/id_rsa
-          ssh -o StrictHostKeyChecking=no ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }} 'echo "SSH connection successful"'
+          sshpass -p ${{ secrets.VPS_PASSWORD }} ssh -o StrictHostKeyChecking=no ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }} 'echo "SSH connection successful"'
 
       - name: Start Server
         run: |
-          #  This is the private key used to connect to the server(key.pem in ec2)
-          ssh -o StrictHostKeyChecking=no ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }} '
-            cd /home/${{ secrets.EC2_USER }}/my-app-2
+          sshpass -p ${{ secrets.VPS_PASSWORD }} ssh -o StrictHostKeyChecking=no ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }} '
+            cd /home/${{ secrets.VPS_USER }}/my-app-2
             npm install -f
             npm run build
             ./rundb.sh
