@@ -20,7 +20,7 @@ jobs:
         run: npm ci
 
       - name: Build App
-        run: node index.js
+        run: npm run start
 
       - name: Deploy with rsync
         uses: burnett01/rsync-deployments@5.1
