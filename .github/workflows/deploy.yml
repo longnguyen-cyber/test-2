@@ -39,17 +39,12 @@ jobs:
           username: ${{ secrets.USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: 22
-
-      - name: Start Server
-        run: |
-          mkdir -p ~/.ssh
-          echo "${{ secrets.SSH_PRIVATE_KEY }}" | tr -d '\r' > ~/.ssh/id_rsa
-          chmod 600 ~/.ssh/id_rsa
-          ssh -o StrictHostKeyChecking=no ${{ secrets.USER }}@${{ secrets.HOST }} '
-            cd /home/${{ secrets.USER }}/my-app-2
-            npm install -f
+          script: |
+            cd ~/home/${{ secrets.USER }}/app
+            git pull origin master
+            git status
+            npm install -f --only=prod
             npm run build
             ./rundb.sh
             pm2 start dist/main.js --name test_app_2
             pm2 save
-          '
