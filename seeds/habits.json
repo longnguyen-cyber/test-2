@@ -8,7 +8,7 @@
         "icon": "cycle",
         "description": "descriptionription ....",
         "days": 30,
-        "exp": 100,
+        "point": 100,
         "rating": 4.5,
         "tasks": [
           {
@@ -30,7 +30,7 @@
         "icon": "faceMask",
         "description": "descriptionription ....",
         "days": 14,
-        "exp": 50,
+        "point": 50,
         "rating": 4.5,
         "tasks": [
           {
@@ -60,7 +60,7 @@
         "icon": "muscles",
         "description": "descriptionription ....",
         "days": 14,
-        "exp": 50,
+        "point": 50,
         "rating": 4.5,
         "tasks": [
           {
@@ -96,7 +96,7 @@
         "icon": "smoking",
         "description": "descriptionription ....",
         "days": 30,
-        "exp": 100,
+        "point": 100,
         "rating": 4.5,
         "tasks": [
           {
@@ -121,7 +121,7 @@
         "icon": "antiSocial",
         "description": "descriptionription ....",
         "days": 14,
-        "exp": 50,
+        "point": 50,
         "rating": 4.5,
         "tasks": [
           {
@@ -157,7 +157,7 @@
         "icon": "sleep",
         "description": "descriptionription ....",
         "days": 7,
-        "exp": 50,
+        "point": 50,
         "rating": 4.5,
         "tasks": [
           {
@@ -182,7 +182,7 @@
         "icon": "breakfast",
         "description": "descriptionription ....",
         "days": 30,
-        "exp": 100,
+        "point": 100,
         "rating": 4.5,
         "tasks": [
           {
@@ -218,7 +218,7 @@
         "icon": "reading_60",
         "description": "descriptionription ....",
         "days": 60,
-        "exp": 200,
+        "point": 200,
         "rating": 4.5,
         "tasks": [
           {
@@ -243,7 +243,7 @@
         "icon": "reading_7",
         "description": "descriptionription ....",
         "days": 7,
-        "exp": 50,
+        "point": 50,
         "rating": 4.5,
         "tasks": [
           {
@@ -269,7 +269,7 @@
         "icon": "cardio",
         "description": "descriptionription ....",
         "days": 7,
-        "exp": 50,
+        "point": 50,
         "rating": 4.5,
         "tasks": [
           {
@@ -294,7 +294,7 @@
         "icon": "freedom",
         "description": "descriptionription ....",
         "days": 14,
-        "exp": 100,
+        "point": 100,
         "rating": 4.5,
         "tasks": [
           {
