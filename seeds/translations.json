@@ -1,0 +1,334 @@
+[
+  {
+    "lang": "cn",
+    "data": [
+      {
+        "smoking": "30天戒烟",
+        "faceMask": "14天护肤计划",
+        "cycle": "30天身体升级",
+        "freedom": "14天自由",
+        "breakfast": "30顿能量早餐",
+        "reading_7": "7天提升知识",
+        "muscles": "14天身体改善",
+        "reading_60": "60天自学",
+        "cardio": "7天减少负面能量",
+        "antiSocial": "戒社交媒体7/14天",
+        "sleep": "7天改善睡眠"
+      },
+      {
+        "chat": "和一个新朋友聊天",
+        "smoking": "不吸烟",
+        "watching": "看电影",
+        "youtube": "看YouTube 30分钟",
+        "cofffee": "一个人喝咖啡",
+        "playGame": "玩游戏",
+        "sleep": "11点前睡觉",
+        "pushup": "做俯卧撑",
+        "reading": "总结知识",
+        "music": "听30分钟冥想音乐",
+        "facebook": "不看Facebook",
+        "walking": "步行15分钟",
+        "faceMask": "敷面膜",
+        "meditation": "冥想30分钟",
+        "podcast": "听30分钟播客",
+        "washing": "睡前洗脸",
+        "veganFood": "吃蔬菜",
+        "charity": "慈善",
+        "drink": "喝7杯水",
+        "run": "跑步",
+        "tiktok": "不看TikTok"
+      },
+      {
+        "vegetable": "关注健康",
+        "reading": "提升知识",
+        "muscles": "戒除坏习惯",
+        "daily": "日常习惯",
+        "meditation_topic": "放松心灵"
+      }
+    ],
+    "descriptions": [
+      {
+        "smoking": "戒烟 30 天挑战，促进健康和福祉。"
+      },
+      {
+        "faceMask": "14 天护肤程序，使皮肤恢复活力，改善皮肤健康。"
+      },
+      {
+        "cycle": "30 天身体升级计划，专注于整体健身和健康。"
+      },
+      {
+        "freedom": "享受 14 天的自由，放松身心，追求个人兴趣。"
+      },
+      {
+        "breakfast": "30 天准备活力早餐的指南，助您开启美好的一天。"
+      },
+      {
+        "reading_7": "为期 7 天的计划，专注于通过阅读和学习来增强知识。"
+      },
+      {
+        "muscles": "14 天身体改善计划，专注于肌肉增强和塑形。"
+      },
+      {
+        "reading_60": "开始 60 天的自学之旅，以实现个人成长和发展。"
+      },
+      {
+        "cardio": "为期 7 天的有氧运动计划，以减少负能量并改善心理健康。"
+      },
+      {
+        "antiSocial": "通过 7 或 14 天的数字排毒来休息一下社交媒体。"
+      },
+      {
+        "sleep": "为期 7 天的计划，旨在提高睡眠质量并建立更好的睡眠习惯。"
+      }
+    ]
+  },
+  {
+    "lang": "en",
+    "data": [
+      {
+        "smoking": "Quit smoking for 30 days",
+        "faceMask": "14-day skincare routine",
+        "cycle": "30-day body upgrade",
+        "freedom": "14 days of freedom",
+        "breakfast": "30 energy-boosting breakfasts",
+        "reading_7": "7 days of knowledge enhancement",
+        "muscles": "14-day body improvement",
+        "reading_60": "60 days of self-study",
+        "cardio": "7 days to reduce negative energy",
+        "antiSocial": "Quit social media for 7/14 days",
+        "sleep": "7-day sleep improvement"
+      },
+      {
+        "chat": "Chat with a new friend",
+        "smoking": "No smoking",
+        "watching": "Watch a movie",
+        "youtube": "Watch YouTube for 30 minutes",
+        "cofffee": "Have coffee alone",
+        "playGame": "Play games",
+        "sleep": "Sleep before 11 PM",
+        "pushup": "Do push-ups",
+        "reading": "Summarize knowledge",
+        "music": "Listen to meditation music for 30 minutes",
+        "facebook": "No Facebook",
+        "walking": "Walk for 15 minutes",
+        "faceMask": "Apply a face mask",
+        "meditation": "Meditate for 30 minutes",
+        "podcast": "Listen to a podcast for 30 minutes",
+        "washing": "Wash your face before sleeping",
+        "veganFood": "Eat vegetables",
+        "charity": "Charity",
+        "drink": "Drink 7 cups of water",
+        "run": "Go running",
+        "tiktok": "No TikTok"
+      },
+      {
+        "vegetable": "Take care of health",
+        "reading": "Enhance knowledge",
+        "muscles": "Quit bad habits",
+        "daily": "Daily habits",
+        "meditation_topic": "Relax the mind"
+      }
+    ],
+    "descriptions": [
+      {
+        "smoking": "A 30-day challenge to quit smoking, promoting health and well-being."
+      },
+      {
+        "faceMask": "A 14-day skincare routine to rejuvenate and improve skin health."
+      },
+      {
+        "cycle": "A 30-day body upgrade program focusing on overall fitness and wellness."
+      },
+      {
+        "freedom": "Enjoy 14 days of freedom to unwind and pursue personal interests."
+      },
+      {
+        "breakfast": "A 30-day guide to preparing energy-boosting breakfasts to start your day right."
+      },
+      {
+        "reading_7": "A 7-day program focused on knowledge enhancement through reading and learning."
+      },
+      {
+        "muscles": "A 14-day program for body improvement, focusing on muscle strengthening and toning."
+      },
+      {
+        "reading_60": "Embark on a 60-day self-study journey for personal growth and development."
+      },
+      {
+        "cardio": "A 7-day cardio program to reduce negative energy and improve mental well-being."
+      },
+      {
+        "antiSocial": "Take a break from social media with a 7 or 14-day digital detox."
+      },
+      {
+        "sleep": "A 7-day program aimed at improving sleep quality and establishing better sleep habits."
+      }
+    ]
+  },
+  {
+    "lang": "kr",
+    "data": [
+      {
+        "smoking": "30일 금연",
+        "faceMask": "14일 피부 관리 루틴",
+        "cycle": "30일 체력 향상",
+        "freedom": "14일 자유",
+        "breakfast": "30개의 에너지 아침 식사",
+        "reading_7": "7일 지식 향상",
+        "muscles": "14일 신체 개선",
+        "reading_60": "60일 자기 학습",
+        "cardio": "7일 동안 부정적 에너지 줄이기",
+        "antiSocial": "7/14일 동안 SNS 끊기",
+        "sleep": "7일 수면 개선"
+      },
+      {
+        "chat": "새 친구와 채팅하기",
+        "smoking": "금연",
+        "watching": "영화 보기",
+        "youtube": "유튜브 30분 보기",
+        "cofffee": "혼자 커피 마시기",
+        "playGame": "게임하기",
+        "sleep": "11시 전에 잠자기",
+        "pushup": "팔굽혀펴기",
+        "reading": "지식 정리",
+        "music": "명상 음악 30분 듣기",
+        "facebook": "페이스북 안 보기",
+        "walking": "15분 걷기",
+        "faceMask": "팩하기",
+        "meditation": "30분 명상하기",
+        "podcast": "30분 팟캐스트 듣기",
+        "washing": "자기 전에 세안하기",
+        "veganFood": "야채 먹기",
+        "charity": "자선",
+        "drink": "물 7잔 마시기",
+        "run": "러닝하기",
+        "tiktok": "틱톡 안 보기"
+      },
+      {
+        "vegetable": "건강 관리",
+        "reading": "지식 향상",
+        "muscles": "나쁜 습관 끊기",
+        "daily": "일상 습관",
+        "meditation_topic": "마음의 안정을 위한 휴식"
+      }
+    ],
+    "descriptions": [
+      {
+        "smoking": "戒烟 30 天挑战，促进健康和福祉。"
+      },
+      {
+        "faceMask": "14 天护肤程序，使皮肤恢复活力，改善皮肤健康。"
+      },
+      {
+        "cycle": "30 天身体升级计划，专注于整体健身和健康。"
+      },
+      {
+        "freedom": "享受 14 天的自由，放松身心，追求个人兴趣。"
+      },
+      {
+        "breakfast": "30 天准备活力早餐的指南，助您开启美好的一天。"
+      },
+      {
+        "reading_7": "为期 7 天的计划，专注于通过阅读和学习来增强知识。"
+      },
+      {
+        "muscles": "14 天身体改善计划，专注于肌肉增强和塑形。"
+      },
+      {
+        "reading_60": "开始 60 天的自学之旅，以实现个人成长和发展。"
+      },
+      {
+        "cardio": "为期 7 天的有氧运动计划，以减少负能量并改善心理健康。"
+      },
+      {
+        "antiSocial": "通过 7 或 14 天的数字排毒来休息一下社交媒体。"
+      },
+      {
+        "sleep": "为期 7 天的计划，旨在提高睡眠质量并建立更好的睡眠习惯。"
+      }
+    ]
+  },
+  {
+    "lang": "vi",
+    "data": [
+      {
+        "smoking": "Bỏ thuốc lá 30 ngày",
+        "faceMask": "14 ngày chăm sóc da",
+        "cycle": "Nâng cấp cơ thể 30 ngày",
+        "freedom": "14 ngày tự do",
+        "breakfast": "30 Bữa sáng năng lượng",
+        "reading_7": "7 ngày nâng cao kiến thức",
+        "muscles": "Nâng cấp cơ thể 14 ngày",
+        "reading_60": "60 ngày tự học",
+        "cardio": "7 ngày giảm năng lượng xấu",
+        "antiSocial": "Từ bỏ MXH 7/14 ngày",
+        "sleep": "Cải thiện giấc ngủ 7 ngày"
+      },
+      {
+        "chat": "Nhắn tin cho 1 người bạn mới",
+        "smoking": "Không hút thuốc",
+        "watching": "Xem 1 phim",
+        "youtube": "Xem youtube 30 phút",
+        "cofffee": "Cafe 1 mình",
+        "playGame": "Chơi game",
+        "sleep": "Ngủ trước 11h",
+        "pushup": "Hít đất",
+        "reading": "Tổng hợp lại kiến thức",
+        "music": "Nghe nhạc thiền 30 phút",
+        "facebook": "Không xem face book",
+        "walking": "Đi bộ 15 phút",
+        "faceMask": "Đắp mặt nạ",
+        "meditation": "Thiền 30 phút",
+        "podcast": "Nghe postcard 30 phút",
+        "washing": "Rửa mặt trước khi ngủ",
+        "veganFood": "Ăn rau củ",
+        "charity": "Tư thiện",
+        "drink": "Uống 7 cốc nước",
+        "run": "Chạy bộ",
+        "tiktok": "Không xem tiktok"
+      },
+      {
+        "vegetable": "Chăm sóc sức khỏe",
+        "reading": "Nâng cao kiến thức",
+        "muscles": "Bỏ thói quen xấu",
+        "daily": "Thói quen hàng ngày",
+        "meditation_topic": "Thư giản tinh thần"
+      }
+    ],
+    "descriptions": [
+      {
+        "smoking": "Thử thách 30 ngày bỏ thuốc lá, thúc đẩy sức khỏe và sự khỏe mạnh."
+      },
+      {
+        "faceMask": "Một quy trình chăm sóc da 14 ngày để trẻ hóa và cải thiện sức khỏe làn da."
+      },
+      {
+        "cycle": "Chương trình nâng cấp cơ thể 30 ngày tập trung vào thể lực và sức khỏe tổng thể."
+      },
+      {
+        "freedom": "Tận hưởng 14 ngày tự do để thư giãn và theo đuổi sở thích cá nhân."
+      },
+      {
+        "breakfast": "Hướng dẫn 30 ngày chuẩn bị bữa sáng tăng cường năng lượng để bắt đầu ngày mới đúng cách."
+      },
+      {
+        "reading_7": "Chương trình 7 ngày tập trung vào việc nâng cao kiến thức thông qua đọc sách và học tập."
+      },
+      {
+        "muscles": "Chương trình cải thiện cơ thể 14 ngày, tập trung vào tăng cường sức mạnh và săn chắc cơ bắp."
+      },
+      {
+        "reading_60": "Bắt đầu hành trình tự học 60 ngày để phát triển và tăng trưởng cá nhân."
+      },
+      {
+        "cardio": "Chương trình cardio 7 ngày để giảm năng lượng tiêu cực và cải thiện sức khỏe tinh thần."
+      },
+      {
+        "antiSocial": "Nghỉ ngơi khỏi mạng xã hội với một cuộc cai nghiện kỹ thuật số 7 hoặc 14 ngày."
+      },
+      {
+        "sleep": "Chương trình 7 ngày nhằm cải thiện chất lượng giấc ngủ và thiết lập thói quen ngủ tốt hơn."
+      }
+    ]
+  }
+]

@@ -1,0 +1,324 @@
+[
+  {
+    "name": "Chăm sóc sức khỏe",
+    "icon": "vegetable",
+    "habits": [
+      {
+        "name": "Nâng cấp cơ thể 30 ngày",
+        "icon": "cycle",
+        "description": "descriptionription ....",
+        "days": 30,
+        "exp": 100,
+        "rating": 4.5,
+        "tasks": [
+          {
+            "icon": "veganFood",
+            "name": "Ăn rau củ"
+          },
+          {
+            "icon": "run",
+            "name": "Chạy bộ"
+          },
+          {
+            "icon": "pushup",
+            "name": "Hít đất"
+          }
+        ]
+      },
+      {
+        "name": "14 ngày chăm sóc da",
+        "icon": "faceMask",
+        "description": "descriptionription ....",
+        "days": 14,
+        "exp": 50,
+        "rating": 4.5,
+        "tasks": [
+          {
+            "icon": "washing",
+            "name": "Rửa mặt trước khi ngủ",
+            "point": 10
+          },
+          {
+            "icon": "drink",
+            "name": "Uống 8 cốc nước",
+            "point": 10
+          },
+          {
+            "icon": "sleep",
+            "name": "Ngủ trước 11h",
+            "point": 10
+          },
+          {
+            "icon": "faceMask",
+            "name": "Đắp mặt nạ",
+            "point": 10
+          }
+        ]
+      },
+      {
+        "name": "Nâng cấp cơ thể 14 ngày",
+        "icon": "muscles",
+        "description": "descriptionription ....",
+        "days": 14,
+        "exp": 50,
+        "rating": 4.5,
+        "tasks": [
+          {
+            "icon": "veganFood",
+            "name": "Ăn rau củ",
+            "point": 10
+          },
+          {
+            "icon": "run",
+            "name": "Chạy bộ",
+            "point": 10
+          },
+          {
+            "icon": "drink",
+            "name": "Uống 8 cốc nước",
+            "point": 10
+          },
+          {
+            "icon": "pushup",
+            "name": "Hít đất",
+            "point": 10
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Bỏ thói quen xấu",
+    "icon": "muscles",
+    "habits": [
+      {
+        "name": "Bỏ thuốc lá 30 ngày",
+        "icon": "smoking",
+        "description": "descriptionription ....",
+        "days": 30,
+        "exp": 100,
+        "rating": 4.5,
+        "tasks": [
+          {
+            "icon": "smoking",
+            "name": "Không hút thuốc",
+            "point": 10
+          },
+          {
+            "icon": "drink",
+            "name": "Uống 8 cốc nước",
+            "point": 10
+          },
+          {
+            "icon": "walking",
+            "name": "Đi bộ 15 phút",
+            "point": 10
+          }
+        ]
+      },
+      {
+        "name": "Từ bỏ MXH 7/14 ngày",
+        "icon": "antiSocial",
+        "description": "descriptionription ....",
+        "days": 14,
+        "exp": 50,
+        "rating": 4.5,
+        "tasks": [
+          {
+            "icon": "facebook",
+            "name": "Không xem face book",
+            "point": 10
+          },
+          {
+            "icon": "tiktok",
+            "name": "Không xem tiktok",
+            "point": 10
+          },
+          {
+            "icon": "youtube",
+            "name": "Xem youtube 30 phút",
+            "point": 10
+          },
+          {
+            "icon": "walking",
+            "name": "Đi bộ 15 phút",
+            "point": 10
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Thói quen hàng ngày",
+    "icon": "daily",
+    "habits": [
+      {
+        "name": "Cải thiện giấc ngủ 7 ngày",
+        "icon": "sleep",
+        "description": "descriptionription ....",
+        "days": 7,
+        "exp": 50,
+        "rating": 4.5,
+        "tasks": [
+          {
+            "icon": "sleep",
+            "name": "Ngủ trước 11h",
+            "point": 10
+          },
+          {
+            "icon": "meditation",
+            "name": "Thiền 30 phút",
+            "point": 10
+          },
+          {
+            "icon": "drink",
+            "name": "Uống 7 cốc nước",
+            "point": 10
+          }
+        ]
+      },
+      {
+        "name": "30 Bữa sáng năng lượng",
+        "icon": "breakfast",
+        "description": "descriptionription ....",
+        "days": 30,
+        "exp": 100,
+        "rating": 4.5,
+        "tasks": [
+          {
+            "icon": "run",
+            "name": "Chạy bộ 15 phút",
+            "point": 10
+          },
+          {
+            "icon": "sleep",
+            "name": "Ngủ trước 11h",
+            "point": 10
+          },
+          {
+            "icon": "meditation",
+            "name": "Thiền 30 phút",
+            "point": 10
+          },
+          {
+            "icon": "drink",
+            "name": "Uống 8 cốc nước",
+            "point": 10
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Nâng cao kiến thức",
+    "icon": "reading",
+    "habits": [
+      {
+        "name": "60 ngày tự học",
+        "icon": "reading_60",
+        "description": "descriptionription ....",
+        "days": 60,
+        "exp": 200,
+        "rating": 4.5,
+        "tasks": [
+          {
+            "icon": "reading",
+            "name": "Tự học 60 phút",
+            "point": 10
+          },
+          {
+            "icon": "reading",
+            "name": "Tổng hợp lại kiến thức",
+            "point": 10
+          },
+          {
+            "icon": "meditation",
+            "name": "Thiền 30 phút",
+            "point": 10
+          }
+        ]
+      },
+      {
+        "name": "7 ngày nâng cao kiến thức",
+        "icon": "reading_7",
+        "description": "descriptionription ....",
+        "days": 7,
+        "exp": 50,
+        "rating": 4.5,
+        "tasks": [
+          {
+            "icon": "podcast",
+            "name": "Nghe postcard 30 phút",
+            "point": 10
+          },
+          {
+            "icon": "reading",
+            "name": "Đọc sách 30 phút",
+            "point": 10
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Thư giản tinh thần",
+    "icon": "meditation_topic",
+    "habits": [
+      {
+        "name": "7 ngày giảm năng lượng xấu",
+        "icon": "cardio",
+        "description": "descriptionription ....",
+        "days": 7,
+        "exp": 50,
+        "rating": 4.5,
+        "tasks": [
+          {
+            "icon": "music",
+            "name": "Nghe nhạc thiền 30 phút",
+            "point": 10
+          },
+          {
+            "icon": "charity",
+            "name": "Tư thiện",
+            "point": 10
+          },
+          {
+            "icon": "veganFood",
+            "name": "Ăn chay",
+            "point": 10
+          }
+        ]
+      },
+      {
+        "name": "14 ngày tự do",
+        "icon": "freedom",
+        "description": "descriptionription ....",
+        "days": 14,
+        "exp": 100,
+        "rating": 4.5,
+        "tasks": [
+          {
+            "icon": "playGame",
+            "name": "Chơi game",
+            "point": 10
+          },
+          {
+            "icon": "watching",
+            "name": "Xem 1 phim",
+            "point": 10
+          },
+          {
+            "icon": "cofffee",
+            "name": "Cafe 1 mình",
+            "point": 10
+          },
+          {
+            "icon": "chat",
+            "name": "Nhắn tin cho 1 người bạn mới",
+            "point": 10
+          }
+        ]
+      }
+    ]
+  }
+]

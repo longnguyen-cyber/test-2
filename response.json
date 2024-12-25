@@ -1,0 +1,354 @@
+{
+  "data": [
+    {
+      "id": "0a506b1c-138a-48f8-9d9a-b05339fbae0e",
+      "name": "Chăm sóc sức khỏe",
+      "icon": "ic_health.png",
+      "description": null,
+      "habits": [
+        {
+          "id": "0e07d5af-25c1-40ff-b65c-42f0afba7598",
+          "name": "Nâng cấp cơ thể 30 ngày",
+          "icon": "ic_health.png",
+          "description": "descriptionription ....",
+          "tasks": [
+            {
+              "id": "66d149f5-0f01-4188-8d8a-b02bffe0c8de",
+              "name": "Ăn rau củ",
+              "icon": null,
+              "description": null
+            },
+            {
+              "id": "69144f71-6402-42e9-8f60-72579d05de47",
+              "name": "Chạy bộ",
+              "icon": null,
+              "description": null
+            },
+            {
+              "id": "f90182c7-4c50-4b2a-a6d1-5acf31b2a8a6",
+              "name": "Hít đất",
+              "icon": null,
+              "description": null
+            }
+          ]
+        },
+        {
+          "id": "4d6e0c29-8a4c-4175-899c-3404f3d39632",
+          "name": "Nâng cấp cơ thể 14 ngày",
+          "icon": "ic_health.png",
+          "description": "descriptionription ....",
+          "tasks": [
+            {
+              "id": "700f0849-043e-426d-8f6a-eccb0e78260a",
+              "name": "Uống 8 cốc nước",
+              "icon": null,
+              "description": null
+            },
+            {
+              "id": "9b55e41b-1cc7-44dc-8fa9-2059c52824a1",
+              "name": "Chạy bộ",
+              "icon": null,
+              "description": null
+            },
+            {
+              "id": "dedeee62-5a69-4a2f-a422-1668c9849558",
+              "name": "Ăn rau củ",
+              "icon": null,
+              "description": null
+            },
+            {
+              "id": "f0373147-97d1-41fe-bf00-8a3c5e2545b1",
+              "name": "Hít đất",
+              "icon": null,
+              "description": null
+            }
+          ]
+        },
+        {
+          "id": "94e40b0a-a5b4-4ded-ae15-359d1fe8b00f",
+          "name": "14 ngày chăm sóc da",
+          "icon": "ic_health.png",
+          "description": "descriptionription ....",
+          "tasks": [
+            {
+              "id": "48e77fd7-ada3-4487-ba9a-f409a0adeb80",
+              "name": "Đắp mặt nạ",
+              "icon": null,
+              "description": null
+            },
+            {
+              "id": "7cafa878-3e22-49d1-b6a2-626556605727",
+              "name": "Ngủ trước 11h",
+              "icon": null,
+              "description": null
+            },
+            {
+              "id": "8d243cb0-a4d0-4667-91cf-2eb5f0cf7586",
+              "name": "Uống 8 cốc nước",
+              "icon": null,
+              "description": null
+            },
+            {
+              "id": "fdc717ae-f4ab-4654-b3b8-f14bc0dafa48",
+              "name": "Rửa mặt trước khi ngủ",
+              "icon": null,
+              "description": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "53a70e12-528e-466c-aeb3-346efe59ef94",
+      "name": "Thư giản tinh thần",
+      "icon": "ic_health.png",
+      "description": null,
+      "habits": [
+        {
+          "id": "b4c0123a-b835-4584-bba1-9360706104ce",
+          "name": "14 ngày tự do",
+          "icon": "ic_health.png",
+          "description": "descriptionription ....",
+          "tasks": [
+            {
+              "id": "19ffecb7-342c-4be3-9c67-2b13396cfcf1",
+              "name": "Cafe 1 mình",
+              "icon": null,
+              "description": null
+            },
+            {
+              "id": "2d0d1fa3-87d8-4038-925d-a0a0f00dc95f",
+              "name": "Chơi game",
+              "icon": null,
+              "description": null
+            },
+            {
+              "id": "6e61090c-fda5-49bb-872c-443e6581543c",
+              "name": "Xem 1 phim",
+              "icon": null,
+              "description": null
+            },
+            {
+              "id": "a1e5ee98-df0e-4166-8abc-f1076f019abc",
+              "name": "Nhắn tin cho 1 người bạn mới",
+              "icon": null,
+              "description": null
+            }
+          ]
+        },
+        {
+          "id": "bc4bf106-cba9-4359-893a-481c72b8bfbf",
+          "name": "7 ngày giảm năng lượng xấu",
+          "icon": "ic_health.png",
+          "description": "descriptionription ....",
+          "tasks": [
+            {
+              "id": "057d47db-be69-4050-83b0-0a7af540357a",
+              "name": "Ăn chay",
+              "icon": null,
+              "description": null
+            },
+            {
+              "id": "18286df4-f255-43c9-8df0-b05d9699f0e9",
+              "name": "Tư thiện",
+              "icon": null,
+              "description": null
+            },
+            {
+              "id": "f63f53f2-5953-495f-a6db-882233d7231b",
+              "name": "Nghe nhạc thiền 30 phút",
+              "icon": null,
+              "description": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "7a3d766c-a2aa-4bfc-8d31-ad9d13ed81a1",
+      "name": "Bỏ thói quen xấu",
+      "icon": "ic_health.png",
+      "description": null,
+      "habits": [
+        {
+          "id": "9156362b-5dde-43f6-8991-e99b48900338",
+          "name": "Từ bỏ MXH 7/14 ngày",
+          "icon": "ic_health.png",
+          "description": "descriptionription ....",
+          "tasks": [
+            {
+              "id": "07b905a5-c06f-4dac-97dd-48a7a66fe491",
+              "name": "Không xem tiktok",
+              "icon": null,
+              "description": null
+            },
+            {
+              "id": "0fe220dc-42a0-4a6b-b22c-ed80f30fd3d2",
+              "name": "Đi bộ 15 phút",
+              "icon": null,
+              "description": null
+            },
+            {
+              "id": "996f6e34-6b3e-4457-9d7a-42b43710691d",
+              "name": "Xem youtu 30 phút",
+              "icon": null,
+              "description": null
+            },
+            {
+              "id": "fee8d364-6988-4f0a-b7cd-2afdca301801",
+              "name": "Không xem face book",
+              "icon": null,
+              "description": null
+            }
+          ]
+        },
+        {
+          "id": "fc38ae3f-2983-4962-a4fe-ba2e322df739",
+          "name": "Bỏ thuốc lá 30 ngày",
+          "icon": "ic_health.png",
+          "description": "descriptionription ....",
+          "tasks": [
+            {
+              "id": "3cf069fa-1c6b-4295-887c-775119f7ce1f",
+              "name": "Đi bộ 15 phút",
+              "icon": null,
+              "description": null
+            },
+            {
+              "id": "47f72f22-27e5-44e5-8f3b-febf59eb895c",
+              "name": "Không hút thuốc",
+              "icon": null,
+              "description": null
+            },
+            {
+              "id": "b6961c86-a49a-4bb9-bf70-e2848112f713",
+              "name": "Uống 8 cốc nước",
+              "icon": null,
+              "description": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "8bc406e7-e444-4479-969c-269bdd71e175",
+      "name": "Thói quen hàng ngày",
+      "icon": "ic_health.png",
+      "description": null,
+      "habits": [
+        {
+          "id": "2ea31ff1-caf8-4fb5-8b95-dc4bd65d7607",
+          "name": "30 Bữa sáng năng lượng",
+          "icon": "ic_health.png",
+          "description": "descriptionription ....",
+          "tasks": [
+            {
+              "id": "0a5b6fae-0bdd-4d8f-b1c1-fd1c25dd20ad",
+              "name": "Uống 8 cốc nước",
+              "icon": null,
+              "description": null
+            },
+            {
+              "id": "941701a9-2480-431f-af7e-6a5d29750a71",
+              "name": "Ngủ trước 11h",
+              "icon": null,
+              "description": null
+            },
+            {
+              "id": "d36e15d8-ec6c-4fb9-9dca-c17fbec5c3bb",
+              "name": "Chạy bộ 15 phút",
+              "icon": null,
+              "description": null
+            },
+            {
+              "id": "f67000df-443c-4843-a341-37e642abf7dc",
+              "name": "Thiền 30 phút",
+              "icon": null,
+              "description": null
+            }
+          ]
+        },
+        {
+          "id": "9c4327e6-8c82-4a4a-826c-72ef4f228d3c",
+          "name": "Cải thiện giấc ngủ 7 ngày",
+          "icon": "ic_health.png",
+          "description": "descriptionription ....",
+          "tasks": [
+            {
+              "id": "0d37770c-e504-46c5-8b9b-6ebd234e4751",
+              "name": "Ngủ trước 11h",
+              "icon": null,
+              "description": null
+            },
+            {
+              "id": "571603ab-c7b3-45a4-84a2-fd0a054fd184",
+              "name": "Uống 7 cốc nước",
+              "icon": null,
+              "description": null
+            },
+            {
+              "id": "c7c94af5-21e0-4e10-b04b-e21ef74448ad",
+              "name": "Thiền 30 phút",
+              "icon": null,
+              "description": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c8167e54-189f-420c-a935-221a4a0cd2f2",
+      "name": "Nâng cao kiến thức",
+      "icon": "ic_health.png",
+      "description": null,
+      "habits": [
+        {
+          "id": "05241ec3-38c8-4c36-b5ef-7fcc6cc4812c",
+          "name": "7 ngày nâng cao kiến thức",
+          "icon": "ic_health.png",
+          "description": "descriptionription ....",
+          "tasks": [
+            {
+              "id": "30069265-8e5c-4f48-a4c7-da4deabcd61a",
+              "name": "Nghe postcard 30 phút",
+              "icon": null,
+              "description": null
+            },
+            {
+              "id": "d0d6d196-5986-4703-9fe7-6278a267324c",
+              "name": "Đọc sách 30 phút",
+              "icon": null,
+              "description": null
+            }
+          ]
+        },
+        {
+          "id": "17471c29-fce1-4578-8b0c-7bb1501a0dfa",
+          "name": "60 ngày tự học",
+          "icon": "ic_health.png",
+          "description": "descriptionription ....",
+          "tasks": [
+            {
+              "id": "0be23ed2-c43c-4d79-945f-7bd64db64c0c",
+              "name": "Tổng hợp lại kiến thức",
+              "icon": null,
+              "description": null
+            },
+            {
+              "id": "1f3f94fd-1f80-48f6-b875-44036be6caaa",
+              "name": "Tự học 60 phút",
+              "icon": null,
+              "description": null
+            },
+            {
+              "id": "c4f166fd-08a4-4b14-993b-6621c40aef0d",
+              "name": "Thiền 30 phút",
+              "icon": null,
+              "description": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

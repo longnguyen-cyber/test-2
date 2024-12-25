@@ -16,6 +16,19 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
+      - name: run docker
+        run: docker compose up -d
+
+      - name: Run db migrations
+        run: |
+          sudo chmod +x ./rundb.sh
+          ./rundb.sh
+      - name: Build and test
+        run: |
+          npm install
+          npm run build
+          npm test
+
       - name: Install dependencies
         run: npm ci
       - name: Deploy with rsync
@@ -23,7 +36,7 @@ jobs:
         with:
           switches: -avzr --delete
           path: ./*
-          remote_path: /home/${{ secrets.EC2_USER }}/my-app/
+          remote_path: /home/${{ secrets.EC2_USER }}/my-app-2/
           remote_host: ${{ secrets.EC2_HOST }}
           remote_user: ${{ secrets.EC2_USER }}
           remote_key: '${{ secrets.SSH_PRIVATE_KEY }}'
@@ -39,9 +52,9 @@ jobs:
         run: |
           #  This is the private key used to connect to the server(key.pem in ec2)
           ssh -o StrictHostKeyChecking=no ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }} '
-            cd /home/${{ secrets.EC2_USER }}/my-app
+            cd /home/${{ secrets.EC2_USER }}/my-app-2
             npm install
             pm2 stop all || true
-            pm2 start index.js --name test_app
+            pm2 start dist/main.js --name test_app
             pm2 save
           '
