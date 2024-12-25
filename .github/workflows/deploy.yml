@@ -29,8 +29,6 @@ jobs:
           sudo chmod +x ./rundb.sh
           ./rundb.sh
 
-      - name: Install dependencies
-        run: npm ci
       - name: Deploy with rsync
         uses: burnett01/rsync-deployments@5.1
         with:
