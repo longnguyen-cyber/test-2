@@ -16,12 +16,14 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
+      - name: Install dependencies
+        run: npm ci
+
       - name: run docker
         run: docker compose up -d
 
       - name: Build and test
         run: |
-          npm install -f
           npm run build
 
       - name: Run db migrations
@@ -33,7 +35,7 @@ jobs:
         uses: burnett01/rsync-deployments@5.1
         with:
           switches: -avzr --delete
-          path: ./dist/*
+          path: ./dist/* ./package.json
           remote_path: /home/${{ secrets.EC2_USER }}/my-app-2/
           remote_host: ${{ secrets.EC2_HOST }}
           remote_user: ${{ secrets.EC2_USER }}
@@ -51,6 +53,7 @@ jobs:
           #  This is the private key used to connect to the server(key.pem in ec2)
           ssh -o StrictHostKeyChecking=no ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }} '
             cd /home/${{ secrets.EC2_USER }}/my-app-2
+            npm install -f
             pm2 start dist/main.js --name test_app_2
             pm2 save
           '
