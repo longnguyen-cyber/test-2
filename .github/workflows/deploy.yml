@@ -59,7 +59,7 @@ jobs:
             ./rundb.sh
 
             # Start or restart the application with PM2
-            pm2 startOrRestart dist/main.js --name test_app_2
+            pm2 startOrRestart ecosystem.config.js
 
             # Save the PM2 process list
             pm2 save

@@ -109,7 +109,6 @@
     "lint-staged": "10.5.4",
     "prettier": "2.2.1",
     "ts-node": "9.1.1",
-    "tsconfig-paths": "3.14.1",
     "typescript": "4.2.3"
   },
   "lint-staged": {
