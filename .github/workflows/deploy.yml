@@ -15,10 +15,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Debug SSH_PRIVATE_KEY
-        run: |
-          echo "SSH_PRIVATE_KEY:"
-          echo "${{ secrets.SSH_PRIVATE_KEY }}"
       - name: Test SSH Connection
         run: |
           mkdir -p ~/.ssh
