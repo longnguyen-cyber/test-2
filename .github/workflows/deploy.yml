@@ -43,7 +43,6 @@ jobs:
 
             # Ensure the code is present (it's assumed it's a git repository
             git pull origin master
-            git status
 
             # Run database migrations
             ./rundb.sh
