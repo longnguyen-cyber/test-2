@@ -12,7 +12,7 @@
   "packageManager": "yarn@1.22.19",
   "scripts": {
     "prebuild": "rimraf dist",
-    "build": "nest build",
+    "build": "node_modules/.bin/nest build",
     "doc": "npx compodoc -p tsconfig.json -n \"test Service documentation\" -s",
     "start": "nest start",
     "start:dev": "nest start --watch",
