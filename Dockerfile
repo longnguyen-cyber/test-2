@@ -10,13 +10,22 @@ COPY package*.json ./
 # Install dependencies
 RUN npm install -f --omit=dev
 
+# Install NestJS CLI globally
+RUN npm install -g @nestjs/cli
+
+# Verify installation by listing contents of global path
+RUN ls -al ~/.npm-global/bin
+
+# Set PATH environment variable
+ENV PATH=$PATH:~/.npm-global/bin
+
 # Copy source code
 COPY . .
 COPY .env .env
 
 
 # Build the NestJS application
-RUN npm run build
+RUN npx nest build
 
 # --- Stage: Runner ---
 FROM node:20.18-alpine3.21 AS runner
