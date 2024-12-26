@@ -26,11 +26,11 @@ jobs:
           chmod 600 ~/.ssh/id_rsa
           ssh -o StrictHostKeyChecking=no ${{ secrets.USER }}@${{ secrets.HOST }} 'echo "SSH connection successful"'
 
-      - name: run docker
-        run: docker compose up -d
-
-      - name: Run db migrations
-        run: sudo chmod +x ./rundb.sh
+      - name: Chmod file
+        run: |
+          sudo chmod +x ./start-container.sh
+          sudo chmod +x ./rundb.sh
+          sudo chmod +x ./deploy.sh
 
       - name: Deploy using ssh
         uses: appleboy/ssh-action@master
@@ -49,17 +49,11 @@ jobs:
             git pull origin master
             git status
 
-            # Install only production dependencies
-            npm install -f --omit=dev
-
-            # Build the application
-            npm run build
-
             # Run database migrations
             ./rundb.sh
 
-            # Start or restart the application with PM2
-            pm2 startOrRestart ecosystem.config.js
+            # Restart the container
+            ./start-container.sh
 
-            # Save the PM2 process list
-            pm2 save
+            # Build docker image
+            ./deploy.sh

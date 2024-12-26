@@ -1,9 +1,9 @@
-import { DataSourceOptions } from 'typeorm';
+import { DataSourceOptions } from 'typeorm'
 
-import * as dotenv from 'dotenv';
-import { SeimNamingStrategy } from 'src/common/core';
+import * as dotenv from 'dotenv'
+import { SeimNamingStrategy } from 'src/common/core'
 
-dotenv.config({ path: '../.env' });
+dotenv.config({ path: '../.env' })
 
 const baseOptions = {
   type: process.env.ORM_CONNECTION || 'mysql',
@@ -17,7 +17,7 @@ const baseOptions = {
   dropSchema: false,
   entities: ['../src/**/*.entity.ts'],
   namingStrategy: new SeimNamingStrategy(),
-};
+}
 
 const defaultOptions: DataSourceOptions = {
   ...baseOptions,
@@ -26,7 +26,7 @@ const defaultOptions: DataSourceOptions = {
   logging: true,
   migrationsTableName: '__migrations',
   migrations: ['../migrations/**/*.ts'],
-};
+}
 
 const seedOptions: DataSourceOptions = {
   ...baseOptions,
@@ -36,6 +36,6 @@ const seedOptions: DataSourceOptions = {
   logging: true,
   migrationsTableName: '__seeds',
   migrations: ['../seeds/**/*.ts'],
-};
+}
 
-export default { defaultOptions, seedOptions };
+export default { defaultOptions, seedOptions }

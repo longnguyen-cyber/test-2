@@ -10,6 +10,8 @@ services:
       - '${ORM_PORT}:3306'
     volumes:
       - mysql_data:/var/lib/mysql
+    networks:
+      - seim-network
     env_file:
       - .env
 
@@ -23,8 +25,14 @@ services:
       - ${REDIS_PORT}:6379
     environment:
       - HOST=${REDIS_HOST}
+    networks:
+      - seim-network
     env_file:
       - .env
 
 volumes:
   mysql_data:
+
+networks:
+  seim-network:
+    external: true
