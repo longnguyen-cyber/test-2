@@ -1,5 +1,5 @@
 # --- Stage: Builder ---
-FROM node:20.18-alpine3.21 AS builder
+FROM node:18.20-alpine3.21 AS builder
 
 # Set working directory
 WORKDIR /app
@@ -24,7 +24,7 @@ COPY .env .env
 RUN nest build
 
 # --- Stage: Runner ---
-FROM node:20.18-alpine3.21 AS runner
+FROM node:18.20-alpine3.21 AS runner
 
 # Set working directory
 WORKDIR /app
