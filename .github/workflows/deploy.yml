@@ -43,6 +43,10 @@ jobs:
             # correct the directory path
             cd ~/app
 
+            git restore .
+
+            pwd
+
             # Ensure the code is present (it's assumed it's a git repository
             git pull origin master
             git status
