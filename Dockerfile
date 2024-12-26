@@ -21,7 +21,7 @@ COPY .env .env
 
 
 # Build the NestJS application
-RUN npx nest build
+RUN nest build
 
 # --- Stage: Runner ---
 FROM node:20.18-alpine3.21 AS runner
