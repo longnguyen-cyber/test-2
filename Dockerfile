@@ -7,11 +7,12 @@ WORKDIR /app
 # Copy package.json and package-lock.json
 COPY package*.json ./
 
-# Install dependencies
-RUN npm install -f --omit=dev
-
 # Install NestJS CLI globally
 RUN npm install -g @nestjs/cli
+
+# Install dependencies
+RUN npm install -f --omit=dev && npm run build
+
 
 
 
@@ -20,8 +21,6 @@ COPY . .
 COPY .env .env
 
 
-# Build the NestJS application
-RUN nest build
 
 # --- Stage: Runner ---
 FROM node:18.20-alpine3.21 AS runner
