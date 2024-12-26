@@ -1,29 +1,56 @@
-https://res.cloudinary.com/dkh1ozkvt/image/upload/v1732090388/seim/tasks/Youtube_sl3wab.svg
-https://res.cloudinary.com/dkh1ozkvt/image/upload/v1732090388/seim/tasks/Watching_woq1n1.svg
-https://res.cloudinary.com/dkh1ozkvt/image/upload/v1732090388/seim/tasks/Washing_ylzjku.svg
-https://res.cloudinary.com/dkh1ozkvt/image/upload/v1732090387/seim/tasks/VeganFood_yb3ia6.svg
-https://res.cloudinary.com/dkh1ozkvt/image/upload/v1732090387/seim/tasks/Walking_m90cxp.svg
-https://res.cloudinary.com/dkh1ozkvt/image/upload/v1732090387/seim/tasks/Smoking_jt96i0.svg
-https://res.cloudinary.com/dkh1ozkvt/image/upload/v1732090386/seim/tasks/Reading_hn2yzv.svg
-https://res.cloudinary.com/dkh1ozkvt/image/upload/v1732090386/seim/tasks/Running_evcifi.svg
-https://res.cloudinary.com/dkh1ozkvt/image/upload/v1732090386/seim/tasks/Sleep_yguqys.svg
-https://res.cloudinary.com/dkh1ozkvt/image/upload/v1732090386/seim/tasks/Pushup_lv4omf.svg
-https://res.cloudinary.com/dkh1ozkvt/image/upload/v1732090385/seim/tasks/Podcast_ivxujj.svg
-https://res.cloudinary.com/dkh1ozkvt/image/upload/v1732090385/seim/tasks/PlayGame_pgkmm7.svg
-https://res.cloudinary.com/dkh1ozkvt/image/upload/v1732090384/seim/tasks/Meditation_ydblpq.svg
-https://res.cloudinary.com/dkh1ozkvt/image/upload/v1732090384/seim/tasks/Music_rj9ses.svg
-https://res.cloudinary.com/dkh1ozkvt/image/upload/v1732090384/seim/tasks/Fruit_fkwdsg.svg
-https://res.cloudinary.com/dkh1ozkvt/image/upload/v1732090642/seim/tasks/Tiktok_xfrnuw.svg
-https://res.cloudinary.com/dkh1ozkvt/image/upload/v1732090383/seim/tasks/FaceMask_hyufft.svg
-https://res.cloudinary.com/dkh1ozkvt/image/upload/v1732090382/seim/tasks/DrinkCofffee_qyox2g.svg
-https://res.cloudinary.com/dkh1ozkvt/image/upload/v1732090382/seim/tasks/Alcohol_kyr3td.svg
-https://res.cloudinary.com/dkh1ozkvt/image/upload/v1732090382/seim/tasks/Facebook_ne4k77.svg
-https://res.cloudinary.com/dkh1ozkvt/image/upload/v1732090382/seim/tasks/Drink_s4e0r5.svg
-https://res.cloudinary.com/dkh1ozkvt/image/upload/v1732090382/seim/tasks/Chat_uwrr3n.svg
+name: CI/CD
 
-https://res.cloudinary.com/dkh1ozkvt/image/upload/v1732090344/seim/topics/Vegetable_antznd.svg
-https://res.cloudinary.com/dkh1ozkvt/image/upload/v1732090343/seim/topics/Meditation_dao6zh.svg
-https://res.cloudinary.com/dkh1ozkvt/image/upload/v1732090343/seim/topics/Muscles_jhpubb.svg
-https://res.cloudinary.com/dkh1ozkvt/image/upload/v1732090343/seim/topics/Running_ehutqh.svg
-https://res.cloudinary.com/dkh1ozkvt/image/upload/v1732090343/seim/topics/Running_ehutqh.svg
-https://res.cloudinary.com/dkh1ozkvt/image/upload/v1732090343/seim/topics/Cardio_pqlow6.svg
+on:
+push:
+branches: [master]
+workflow_dispatch:
+
+jobs:
+build:
+runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [18.x]
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Test SSH Connection
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" | tr -d '\r' > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh -o StrictHostKeyChecking=no ${{ secrets.USER }}@${{ secrets.HOST }} 'echo "SSH connection successful"'
+
+      - name: Chmod file
+        run: |
+          sudo chmod +x ./start-containers.sh
+          sudo chmod +x ./rundb.sh
+          sudo chmod +x ./deploy.sh
+
+      - name: Deploy using ssh
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          port: 22
+          script: |
+            # correct the directory path
+            cd ~/app
+
+            git restore .
+
+            # Ensure the code is present (it's assumed it's a git repository
+            git pull origin master
+
+            # Run database migrations
+            ./rundb.sh
+
+            # Restart the container
+            ./start-containers.sh
+
+            # Build docker image
+            ./deploy.sh
+
+// no push to docker hub
