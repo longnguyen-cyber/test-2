@@ -45,8 +45,6 @@ jobs:
 
             git restore .
 
-            pwd
-
             # Ensure the code is present (it's assumed it's a git repository
             git pull origin master
             git status
@@ -56,8 +54,6 @@ jobs:
 
             # Build the application
             npm run build
-
-            ls -la
 
             # Run database migrations
             ./rundb.sh
