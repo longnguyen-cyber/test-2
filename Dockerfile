@@ -12,17 +12,15 @@ COPY tsconfig.json ./
 # Install NestJS CLI globally
 RUN npm install -g @nestjs/cli
 
-# Install dependencies
-RUN npm install -f --omit=dev && npm run build
+# Install dependencies and build the project, redirecting all output
+RUN npm install -f --omit=dev && npm run build >&1
 
-
-
+# Check if dist folder exists and list its contents
+RUN ls -al /app/
 
 # Copy source code
 COPY . .
 COPY .env .env
-
-
 
 # --- Stage: Runner ---
 FROM node:18.20-alpine3.21 AS runner
@@ -35,9 +33,7 @@ COPY --from=builder /app/dist ./dist
 COPY --from=builder /app/package*.json ./
 COPY --from=builder /app/.env ./
 
-
 RUN npm install -f --omit=dev
-
 
 # Expose the port your NestJS app runs on
 EXPOSE 3001
