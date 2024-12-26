@@ -28,7 +28,7 @@ jobs:
 
       - name: Chmod file
         run: |
-          sudo chmod +x ./start-container.sh
+          sudo chmod +x ./start-containers.sh
           sudo chmod +x ./rundb.sh
           sudo chmod +x ./deploy.sh
 
@@ -53,7 +53,7 @@ jobs:
             ./rundb.sh
 
             # Restart the container
-            ./start-container.sh
+            ./start-containers.sh
 
             # Build docker image
             ./deploy.sh
