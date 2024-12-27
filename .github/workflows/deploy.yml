@@ -38,6 +38,9 @@ jobs:
           script: |
             # correct the directory path
             sudo -i
+            pwd
+            cd
+
             cd test-docker
             git restore .
 
