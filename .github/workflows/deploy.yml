@@ -2,7 +2,7 @@ name: CI/CD
 
 on:
   push:
-    branches: [master]
+    branches: [dev]
   workflow_dispatch:
 
 jobs:
@@ -37,12 +37,11 @@ jobs:
           port: 22
           script: |
             # correct the directory path
-            cd ~/app
-
+            sudo -i
+            cd test-docker
             git restore .
 
-            # Ensure the code is present (it's assumed it's a git repository
-            git pull origin master
+            git pull origin dev
 
             # Run database migrations
             ./rundb.sh
