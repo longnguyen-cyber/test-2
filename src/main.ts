@@ -95,7 +95,7 @@ async function bootstrap(): Promise<void> {
 
   app.get(ShutdownObserver).setupGracefulShutdown(app)
 
-  await app.listen(parseInt(process.env.PORT, 10) || 3002)
+  await app.listen(parseInt(process.env.PORT, 10) || 3001)
   console.log(`Application is running on: ${await app.getUrl()}`)
   app
     .get(WINSTON_MODULE_NEST_PROVIDER)
