@@ -36,7 +36,7 @@ COPY --from=builder /app/.env ./
 RUN npm install -f --omit=dev
 
 # Expose the port your NestJS app runs on
-EXPOSE 3001
+EXPOSE 3002
 
 # Command to run your NestJS app
 CMD ["node", "dist/main"]
