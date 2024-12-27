@@ -13,7 +13,7 @@ COPY tsconfig.json ./
 RUN npm install -g @nestjs/cli
 
 # Install dependencies and build the project, redirecting all output
-RUN npm install -f --omit=dev && npm run build >&1
+RUN npm install -f --omit=dev && npm run build
 
 # Check if dist folder exists and list its contents
 RUN ls -al /app/
