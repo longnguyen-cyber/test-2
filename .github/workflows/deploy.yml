@@ -1,51 +1,54 @@
-name: CI/CD Pipeline
+name: CI/CD
 
 on:
   push:
-    branches:
-      - master # Trigger on pushes to the master branch
-  workflow_dispatch: # Allows to manually trigger this action
+    branches: [master]
+  workflow_dispatch:
+
 jobs:
-  build-and-deploy:
+  build:
     runs-on: ubuntu-latest
 
+    strategy:
+      matrix:
+        node-version: [18.x]
     steps:
-      - name: Checkout Code
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v2
 
-      - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v3
+      - name: Test SSH Connection
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" | tr -d '\r' > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh -o StrictHostKeyChecking=no ${{ secrets.USER }}@${{ secrets.HOST }} 'echo "SSH connection successful"'
 
-      - name: Login to Docker Hub
-        uses: docker/login-action@v3
-        with:
-          username: ${{ secrets.DOCKERHUB_USERNAME }}
-          password: ${{ secrets.DOCKERHUB_PASSWORD }}
+      - name: Chmod file
+        run: |
+          sudo chmod +x ./start-containers.sh
+          sudo chmod +x ./rundb.sh
+          sudo chmod +x ./deploy.sh
 
-      - name: Build and Push Docker Image
-        uses: docker/build-push-action@v5
-        with:
-          context: .
-          file: ./Dockerfile
-          push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/seim:1.0
-
-      - name: Deploy to Server via SSH
-        uses: appleboy/ssh-action@v1.0.0
+      - name: Deploy using ssh
+        uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: 22
           script: |
+            # correct the directory path
             cd ~/app
+
+            git restore .
+
+            # Ensure the code is present (it's assumed it's a git repository
+            git pull origin master
 
             # Run database migrations
             ./rundb.sh
+
             # Restart the container
             ./start-containers.sh
 
-            docker pull ${{ secrets.DOCKERHUB_USERNAME }}/seim:1.0
-            docker stop seim || true # Ignore the error if the container is not running
-            docker rm seim || true # Ignore the error if the container is not present
-            docker run -d --network=seim-network --name seim -p 3001:3001 ${{ secrets.DOCKERHUB_USERNAME }}/seim:1.0
+            # Build docker image
+            ./deploy.sh
